@@ -36,7 +36,7 @@ Clone o repositório e instale as dependências:
 
 ```bash
 # Clone o repositório
-git clone [https://github.com/lucasscabral/teste_tecnico_eslab](https://github.com/lucasscabral/teste_tecnico_eslab)
+git clone https://github.com/lucasscabral/teste_tecnico_eslab
 
 # Entre na pasta do projeto
 cd teste_tecnico_eslab
