@@ -9,7 +9,7 @@
 
             <div class="flex-1 min-w-[280px]">
                 <label for="title" class="block text-sm font-semibold text-gray-600 dark:text-gray-300">Título</label>
-                <input placeholder="Titulo Da Sua Tarefa" v-model="title" type="text" name="title" id="title"
+                <input placeholder="Título Da Sua Tarefa" v-model="title" type="text" name="title" id="title"
                     class="w-full rounded-md bg-white dark:bg-gray-700 px-3.5 py-2 text-gray-900 dark:text-gray-200 border border-gray-300 dark:border-gray-600 outline-none focus:ring-2 focus:ring-indigo-500">
                 <span v-if="!errors?.valid && !errors?.dateInvalid && title?.length === 0" class="text-red-500 text-sm">
                     {{ errors?.message }}
