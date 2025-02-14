@@ -18,7 +18,7 @@ Bem-vindo ao **Sistema de Gestão de Tarefas**, uma aplicação desenvolvida com
 ## 📋 Funcionalidades
 
 ✅ Criar, editar e excluir tarefas  
-✅ Pesquisar e filtrar tarefas  
+✅ Pesquisar tarefas  
 ✅ Persistência de dados com **LocalStorage**  
 ✅ Interface responsiva e intuitiva  
 ✅ Animações suaves ao adicionar ou remover tarefas
