@@ -92,14 +92,18 @@
                 Salvar
             </button>
 
-            <button @click="taskStore.deleteTask(task?.id)"
+            <button @click="enableModalDelete"
                 class="h-10 bg-red-500 hover:bg-red-600 text-white p-3 rounded flex justify-center items-center gap-2 transition-colors">
                 <Icon name="fluent-emoji-flat:wastebasket" />
                 Excluir
             </button>
         </div>
-    </div>
 
+        <div v-if="isDeleteModal">
+            <ModalToConfirmDeletion :taskId="task?.id" :titleTask="task?.title" :showModal="isDeleteModal"
+                @closeModal="isDeleteModal = false" />
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -122,6 +126,7 @@ const props = defineProps({
 });
 
 const isEditing = ref(false);
+const isDeleteModal = ref(false);
 
 const editableTask = ref({ ...props.task });
 
@@ -131,6 +136,10 @@ const enableEditing = () => {
         editableTask.value = { ...taskFromStore };
     }
     isEditing.value = true;
+};
+
+const enableModalDelete = () => {
+    isDeleteModal.value = true;
 };
 
 const saveChanges = () => {
